@@ -1,0 +1,79 @@
+/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+ 
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+ 
+body {height:100% !important; margin:0; padding:0; width:100% !important;}
+
+.hd-tips {font-family: Microsoft Yahei;font-size:13px;color:#999999;padding-left:20px;padding-right:20px;text-align:left;}
+.hd-tips a {text-decoration:none;color:#0066cc;}
+
+@media only screen and (max-width: 480px){
+  /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+  body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+  body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+ 
+  body[yahoo] .deviceWidth,
+  body[yahoo] .r-fw {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+ 
+  body[yahoo] .r-fw-img {
+    width: 100% !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
+ 
+  .r-fw .r-fw-col, .r-fw .r-fw-space {
+    display: block !important;
+    width: 100% !important;
+  }
+ 
+  body[yahoo] .g-tile {
+    display: block !important;
+    width: 100% !important;
+    float: left !important;
+    padding: 0 0 10px 0 !important;
+  }
+  body[yahoo] .m-spc-v-hidden,
+  body[yahoo] .g-hidden {
+    display: none !important;
+  }
+ 
+  body[yahoo] .t-line {
+    display: none !important;
+  }
+  body[yahoo] .m-title {
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+ 
+  body[yahoo] .m-title-more {
+    text-align: right !important;
+    padding-right: 0 !important;
+  }
+ 
+  body[yahoo] .r-fw-center td{
+    text-align: center;
+  }
+ 
+  body[yahoo] .r-fw-right-space {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+ 
+  body[yahoo] .h-auto {
+    height: auto !important;
+  }
+ 
+  body[yahoo] .r-w-280 {
+    width: 280px !important;
+  }
+}
