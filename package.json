@@ -6,7 +6,7 @@
     "assemble": "0.4.37",
     "grunt-mailgun": "*",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-premailer": "0.2.5",
+    "grunt-premailer": "0.2.7",
     "grunt-cloudfiles": "^0.3.0",
     "grunt-cdn": "^0.5.2"
   }

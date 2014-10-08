@@ -7,29 +7,27 @@ module.exports = function(grunt) {
         assemble: {
           options: {
             layoutdir: 'src/layouts',
-            partials: ['src/includes/**/*.hbs','src/includes/**/*.css'],
+            partials: ['src/includes/**/*.hbs','src/includes/styles/*.css'],
             flatten: true
           },
           edm: {
-            src: ['src/templates/*.hbs'],
+            src: ['src/templates/template-1.hbs'],
             dest: 'dist/'
           }
         },
 
         // Inlines your css
-        // premailer: {
-        //   simple: {
-        //     options: {
-        //       removeComments: false,
-        //       removeClasses: true
-        //     },
-        //     files: [{
-        //         expand: true,
-        //         src: ['dist/*.html'],
-        //         dest: ''
-        //     }]
-        //   }
-        // },
+        premailer: {
+          simple: {
+            options: {
+              removeComments: false,
+              removeClasses: true
+            },
+            files: {
+                'dist/template-1.html': ['dist/template-1.html']
+            }
+          }
+        },
 
         // Watches for changes to css or email templates then runs grunt tasks
         watch: {
@@ -46,7 +44,7 @@ module.exports = function(grunt) {
               recipient: 'bigpet1991@163.com, 286030975@qq.com, hpzeng@Ctrip.com', // Change this
               subject: 'This is a test email'
             },
-            src: ['dist/*.html']
+            src: ['dist/template-1.html']
           }
         },
 
@@ -88,7 +86,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-cdn');
 
     // Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['assemble']);
+    grunt.registerTask('default', ['assemble', 'premailer']);
 
     // Use grunt send if you want to actually send the email to your inbox
     grunt.registerTask('send', ['mailgun']);

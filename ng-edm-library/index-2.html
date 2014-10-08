@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 minimum-scale=1.0,maximum-scale=1.0"/>
+  <title>Ctrip EDM Library</title>
+  <style type="text/css">
+    /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+    body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+    table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+    img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+    /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+    body{margin:0; padding:0;}
+    img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+    
+    body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+  </style>
+  <link type="text/css" rel="stylesheet" href="styles/shCoreMidnight.css">
+  <link rel="stylesheet" href="styles/doc-main.css">
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-route.min.js"></script>
+  <script src="scripts/docs.js"></script>
+  <script type="text/javascript" src="scripts/shCore.min.js"></script>
+  <script type="text/javascript" src="scripts/shBrushXml.js"></script>
+  <script type="text/javascript" src="scripts/shBrushCss.js"></script>
+</head>
+<body scroll-propagate>
+  <div class="page-hd" id="" ng-controller='HeaderController'>
+    <div class="cont_960 clearfix">
+      <div class="h1">Ctrip EDM Library</div>
+      <ul id="nav-tab" ng-click="switch($event)">
+        <li ng-repeat="tab in tabs" ng-class="{true:'active', false: ''}[tab==currTab]" ng-click="select(tab)">
+          <a href={{tab.link}}>{{tab.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="tab-cont" ng-view> 
+  </div>
+<div class="footer">
+  <p>Copyright © 2014 Ctrip UED. All rights reserved.</p>
+  <p>Ctrip UED公共事业线曾海平维护，<a href="http://www.w3cplus.com/">大漠</a>指导</p>
+</div>
+</body>
+</html>

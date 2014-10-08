@@ -1,0 +1,21 @@
+<div class="tab-panel" id="page-build-and-test">
+  <h1>EDM构建与测试工作流</h1>
+  <p>我们知道，在平常的EDM开发过程中存在大量繁琐的重复工作以及痛点，例如表格的嵌套，重复的内联样式的编写，到邮件客户端发送邮件到各种设备进行测试等。因此我们利用grunt对上述工作打包在一起以减少其开发成本。</p>
+  <h2 class="s-hd">环境配置</h2>
+  <ul class="list">
+    <li>node环境 <a href="http://nodejs.org/dist/v0.10.32/x64/node-v0.10.32-x64.msi">node-downloads</a></li>
+    <li><a href="http://www.gruntjs.net/docs/getting-started/">Grunt-cli 和 Grunt</a> - 基于node的自动化构建工具</li>
+    <li><a href="http://www.mailgun.com/">Mailgun</a> - 发送邮件到客户端</li>
+  </ul>
+  <h2 class="s-hd">准备工作</h2>
+  <p>首先，先将这个仓库克隆到本地<code>http://git.dev.sh.ctripcorp.com/hpzeng/edm-workflow.git</code></p>
+  <p>然后切换到该文件夹根目录下运行 <code>npm install</code> 安装所需要的包。</p>
+  <p>其中 <code>/includes/modules</code> 和 <code>/includes/styles</code> 目录下的文件为邮件的模块文件和样式文件，</p>
+  <p>而 <code>/src/layouts</code> 目录下存放邮件的基础模板，<code>/src/mails</code> 目录下的文件就是你实际引入邮件模块的地方了。</p>
+  <h2 class="s-hd">构建邮件</h2>
+  <p>运行 <code>grunt</code> 命令后执行了 assumble 任务，将你所指定引入的模块组装到基础模板中。最后然后在 <code>/dist</code> 文件夹中生成最终的邮件。下面是一个示例：</p>
+  <div style="width:660px;margin:20px auto;"><img src="images/p1.jpg" width="100%"></div>
+  <h2 class="s-hd">发送邮件</h2>
+  <p>运行 <code>grunt send</code> 命令可将刚刚生成的邮件群发到你在mailgun任务中指定的邮件地址。是一个简便高效的邮件发送云服务，并且在你每天发送的邮件不超过300封的情况下它是免费使用的。但你需要到其官网上注册一个账号，并将和你的账号关联的API-KEY填写在mailgun任务的配置中。下面是一个示例：</p>
+  <div style="width:660px;margin:20px auto;"><img src="images/p2.jpg" width="100%"></div>
+</div>

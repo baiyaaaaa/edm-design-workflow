@@ -1,0 +1,142 @@
+<!-- 基础 -->
+<div class="tab-panel" id="page-scaffold">
+  <div class="cont">
+    <h2 class='header-1' id="template" side-nav-spy>基本模板</h2>
+    <div class="codeWall">
+      <pre code-highlight class="brush: xml;">
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+        &lt;!-- 必须严格使用此文档模式 --&gt;
+        &lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
+        &lt;head&gt;
+          &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 minimum-scale=1.0,maximum-scale=1.0"/&gt;
+          &lt;!-- 添加 meta viewport 优化移动端显示效果及自适应效果 --&gt;
+          &lt;title&gt;EDM优化&lt;/title&gt;
+          &lt;style&gt;
+          &lt;!-- 客户端重置样式以及自适应样式 --&gt;
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body yahoo="fix" bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"  offset="0" style="padding:0;margin:0"&gt;
+          &lt;center&gt;
+            &lt;table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="background-color: #ffffff;" bgcolor="#ffffff"&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;td width="100%"  valign="top" bgcolor="#ffffff" class=""&gt;
+                    &lt;table width="660" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#f5f5f5" style="background-color:#f5f5f5;" valign="top"&gt;
+                      &lt;tbody&gt;
+                        &lt;tr&gt;
+                          &lt;td align="left" valign="top"&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/tbody&gt;
+                    &lt;/table&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/center&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+    </div>
+
+    <h2 class='header-1' id="reset-style" side-nav-spy>重置客户端样式</h2>
+    <div class="codeWall">
+      <pre code-highlight class="brush: css;">
+        /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+        #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+        .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+        body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+        table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+        img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+        /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+        body{margin:0; padding:0;}
+        img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+        
+        body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}</pre>
+    </div>
+
+    <h2 class='header-1' id="responsive" side-nav-spy>移动端自适应样式</h2>
+    <div class="codeWall">
+      <pre code-highlight class="brush: css;">
+        @media only screen and (max-width: 480px){
+          /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+          body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+          body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+
+          body[yahoo] .deviceWidth,
+          body[yahoo] .r-fw {
+            width: 100% !important;
+            padding: 0 !important;
+          }
+
+          body[yahoo] .r-fw-img {
+            width: 100% !important;
+            padding: 0 !important;
+            height: auto !important;
+          }
+
+          .r-fw .r-fw-col, .r-fw .r-fw-space {
+            display: block !important;
+            width: 100% !important;
+          }
+
+          body[yahoo] .g-tile {
+            display: block !important;
+            width: 100% !important;
+            float: left !important;
+            padding: 0 0 10px 0 !important;
+          }
+          body[yahoo] .m-spc-v-hidden,
+          body[yahoo] .g-hidden {
+            display: none !important;
+          }
+
+          body[yahoo] .t-line {
+            display: none !important;
+          }
+          body[yahoo] .m-title {
+            text-align: left !important;
+            padding-left: 0 !important;
+          }
+
+          body[yahoo] .m-title-more {
+            text-align: right !important;
+            padding-right: 0 !important;
+          }
+
+          body[yahoo] .r-fw-center td{
+            text-align: center;
+          }
+
+          body[yahoo] .r-fw-right-space {
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+          }
+
+          body[yahoo] .h-auto {
+            height: auto !important;
+          }
+
+          body[yahoo] .r-w-280 {
+            width: 280px !important;
+          }
+        }</pre>
+    </div>
+  </div>
+  <div class="sidenav" affix-spy>
+    <ul class="nav">
+      <li nav-item>
+        <a href="" data-target="template">基本模板</a>
+      </li>
+      <li nav-item>
+        <a href="" data-target="reset-style">重置样式</a>
+      </li>
+      <li nav-item>
+        <a href="" data-target="responsive">移动端自适应样式</a>
+      </li>
+    </ul>
+    <a href="" class="backToTop" back-to-top>返回顶部</a>
+  </div>
+</div>
